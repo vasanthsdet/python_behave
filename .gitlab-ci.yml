@@ -1,0 +1,20 @@
+stages:
+  - test
+
+variables:
+  PIP_CACHE_DIR: "$CI_PROJECT_DIR/.cache/pip"
+
+cache:
+  paths:
+    - .cache/pip
+
+test:
+  stage: test
+  script:
+    - pip install -r requirements.txt
+    - behave --format=json.pretty --outfile=cucumber.json
+    - allure generate --clean --output ./reports/allure_report/
+  artifacts:
+    paths:
+      - reports/allure_report/
+    expire_in: 1 week
