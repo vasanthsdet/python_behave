@@ -25,7 +25,7 @@ I recommend creating a Virual Env to avoid interfering other Python project on y
 0. Clone this repository.
 1. Move to the cloned repository's directory.
 ```
-cd <path-to>/BackEndAutomationPython
+cd <path-to>/python_behave
 ```
 2. Create the virtual env.
 ```
@@ -39,7 +39,7 @@ source bin/activate
 ### Installing project dependencies.
 1. Move to the cloned repository's directory.
 ```
-cd <path-to>/BackEndAutomationPython
+cd <path-to>/python_behave
 ```
 2. Use `pip` to install dependencies.
 ```
